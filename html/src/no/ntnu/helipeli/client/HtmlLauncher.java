@@ -1,9 +1,9 @@
-package no.ntnu.game.client;
+package no.ntnu.helipeli.client;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import no.ntnu.game.helipeli;
+import no.ntnu.helipeli.helipeli;
 
 public class HtmlLauncher extends GwtApplication {
 

@@ -4,8 +4,8 @@ gwt {
     minHeapSize="1G"
 
     src = files(file("src/")) // Needs to be in front of "modules" below.
-    modules 'no.ntnu.game.GdxDefinition'
-    devModules 'no.ntnu.game.GdxDefinitionSuperdev'
+    modules 'no.ntnu.helipeli.GdxDefinition'
+    devModules 'no.ntnu.helipeli.GdxDefinitionSuperdev'
     project.webAppDirName = 'webapp'
 
     compiler {

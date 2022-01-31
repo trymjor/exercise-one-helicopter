@@ -1,11 +1,11 @@
-package no.ntnu.game;
+package no.ntnu.helipeli;
 
 import org.robovm.apple.foundation.NSAutoreleasePool;
 import org.robovm.apple.uikit.UIApplication;
 
 import com.badlogic.gdx.backends.iosrobovm.IOSApplication;
 import com.badlogic.gdx.backends.iosrobovm.IOSApplicationConfiguration;
-import no.ntnu.game.helipeli;
+import no.ntnu.helipeli.helipeli;
 
 public class IOSLauncher extends IOSApplication.Delegate {
     @Override

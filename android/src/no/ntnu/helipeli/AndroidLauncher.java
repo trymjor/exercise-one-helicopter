@@ -1,10 +1,10 @@
-package no.ntnu.game;
+package no.ntnu.helipeli;
 
 import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import no.ntnu.game.helipeli;
+import no.ntnu.helipeli.helipeli;
 
 public class AndroidLauncher extends AndroidApplication {
 	@Override
