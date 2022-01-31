@@ -19,11 +19,11 @@ public class MainMenu extends ScreenAdapter {
 
     private static final int PLAY_BUTTON_WIDTH = 300;
     private static final int PLAY_BUTTON_HEIGHT = 100;
-    private static final int PLAY_BUTTON_Y = 460;
+    private static final int PLAY_BUTTON_Y = 2*Gdx.graphics.getHeight()/3;
 
     private static final int EXIT_BUTTON_WIDTH = 150;
     private static final int EXIT_BUTTON_HEIGHT = 50;
-    private static final int EXIT_BUTTON_Y = 300;
+    private static final int EXIT_BUTTON_Y = 1*Gdx.graphics.getHeight()/3;
 
     public MainMenu(HeliPeli game){
         this.game = game;
