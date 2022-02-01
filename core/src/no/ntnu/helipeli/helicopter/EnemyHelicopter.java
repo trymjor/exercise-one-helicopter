@@ -10,6 +10,10 @@ import com.badlogic.gdx.math.Vector2;
 import java.util.Random;
 
 
+/**
+ * Tried making an enemy helicopter to attack main helicopter.
+ * WORK IN PROGRESS.
+ */
 public class EnemyHelicopter {
     public Vector2 position;
     private Animation[] anim;

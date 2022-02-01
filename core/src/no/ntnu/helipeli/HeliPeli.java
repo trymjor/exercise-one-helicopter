@@ -3,6 +3,8 @@ package no.ntnu.helipeli;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import no.ntnu.helipeli.mainmenu.MainMenu;
+
 public class HeliPeli extends Game{
     public SpriteBatch batch;
     public static final int WIDTH = 480;
