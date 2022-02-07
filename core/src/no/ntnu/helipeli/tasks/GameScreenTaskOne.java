@@ -23,7 +23,7 @@ public class GameScreenTaskOne extends ScreenAdapter {
         this.game = game;
         this.background = new Texture("city.png");
 
-        this.helicopter = new Helicopter(75, 75, 1);
+        this.helicopter = new Helicopter(75, 75, 1, false);
     }
 
     @Override

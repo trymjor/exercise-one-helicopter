@@ -20,22 +20,8 @@ public class MainMenuButton {
         this.button_y = y;
         this.buttonId = buttonId;
 
-        if(this.buttonId==1){
-            this.buttonActiveSprite = new Texture("mainmenu/task1_active.png");
-            this.buttonInactiveSprite = new Texture("mainmenu/task1_inactive.png");
-        }
-        else if(this.buttonId==2){
-            this.buttonActiveSprite = new Texture("mainmenu/task2_active.png");
-            this.buttonInactiveSprite = new Texture("mainmenu/task2_inactive.png");
-        }
-        else if(this.buttonId==3){
-            this.buttonActiveSprite = new Texture("mainmenu/task3_active.png");
-            this.buttonInactiveSprite = new Texture("mainmenu/task3_inactive.png");
-        }
-        else if(this.buttonId==4){
-            this.buttonActiveSprite = new Texture("mainmenu/task4_active.png");
-            this.buttonInactiveSprite = new Texture("mainmenu/task4_inactive.png");
-        }
+        this.buttonActiveSprite = new Texture("mainmenu/task"+this.buttonId+"_active.png");
+        this.buttonInactiveSprite = new Texture("mainmenu/task"+this.buttonId+"_inactive.png");
         this.currentButtonSprite = buttonInactiveSprite;
     }
 

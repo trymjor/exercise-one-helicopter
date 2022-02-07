@@ -29,7 +29,7 @@ public class GameScreenTaskThree extends ScreenAdapter {
             this.background = new Texture("city.png");
 
             for (int i = 0; i < 3; i++) {
-                Helicopter heli = new Helicopter(Gdx.graphics.getWidth() / 2 - Helicopter.HELI_WIDTH / 2, 300 * i, i);
+                Helicopter heli = new Helicopter(Gdx.graphics.getWidth() / 2 - Helicopter.HELI_WIDTH / 2, 300 * i, i, true);
                 helicopterList.add(heli);
             }
 

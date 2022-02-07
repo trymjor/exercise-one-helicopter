@@ -7,21 +7,23 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
 
+import java.util.Random;
+
 public class Helicopter{
     public Vector2 position;
     private Animation[] anim;
     private int anim_state;
     private boolean movingRight;
     private int heliId;
-    private int x_speed = 3;
-    private int y_speed = 3;
+    private int x_speed;
+    private int y_speed;
 
     private static final float EASING_AMOUNT = (float) 0.02;
     private static final float FRAME_LENGTH = (float)0.1;
     public static final int HELI_WIDTH = 180;
     public static final int HELI_HEIGHT = 65;
 
-    public Helicopter(float x, float y, int heliId){
+    public Helicopter(float x, float y, int heliId, boolean randomSpeed){
         position = new Vector2(x, y);
         movingRight = false;
         this.heliId = heliId;
@@ -30,6 +32,16 @@ public class Helicopter{
         anim_state = 0;
         TextureRegion[][] animSpriteSheet = TextureRegion.split(new Texture("HelicopterSpriteSheet.png"), 180, 65);
         anim[anim_state] = new Animation(FRAME_LENGTH, animSpriteSheet[0]);
+
+        if(randomSpeed){
+            Random random = new Random();
+            this.x_speed = random.nextInt(5);
+            this.y_speed = random.nextInt(5);
+        }
+        else{
+            this.x_speed = 3;
+            this.y_speed = 3;
+        }
     }
 
     /**
@@ -46,8 +58,6 @@ public class Helicopter{
         else if(x_dis <0){
             this.movingRight = false;
         }
-
-        System.out.println(this.position);
         this.position.x += x_dis * EASING_AMOUNT;
         this.position.y += y_dis * EASING_AMOUNT;
 

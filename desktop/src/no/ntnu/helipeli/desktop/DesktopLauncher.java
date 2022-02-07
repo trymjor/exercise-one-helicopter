@@ -11,6 +11,6 @@ public class DesktopLauncher {
 		config.width = HeliPeli.WIDTH;
 		config.height = HeliPeli.HEIGHT;
 		config.resizable = false;
-		new LwjglApplication(new HeliPeli(), config);
+		new LwjglApplication(HeliPeli.getInstance(), config);
 	}
 }
