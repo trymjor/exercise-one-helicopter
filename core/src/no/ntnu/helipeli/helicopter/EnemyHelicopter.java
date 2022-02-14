@@ -19,6 +19,8 @@ public class EnemyHelicopter {
     private Animation[] anim;
     private int anim_state;
     boolean movingRight;
+    private int x_speed;
+    private int y_speed;
 
     private static final float FRAME_LENGTH = (float)0.1;
     public static final int HELI_WIDTH = 90;
@@ -36,23 +38,16 @@ public class EnemyHelicopter {
     }
 
     public void update(){
-        Random rand = new Random();
-        int choice =  rand.nextInt(4);
-
-        if (choice == 0) {
-            this.position.x++;
-        } else if (choice == 1) {
-            this.position.x--;
-        } else if (choice == 2) {
-            this.position.y++;
-        } else {
-            this.position.y--;
+        // Check that helicopter is on screen
+        if (this.position.x < 0 || this.position.x + this.HELI_WIDTH >= Gdx.graphics.getWidth()) this.x_speed *= -1;
+        if (this.position.y < 0 || this.position.y + this.HELI_HEIGHT >= Gdx.graphics.getHeight()) this.y_speed *= -1;
+        if(this.x_speed > 0){
+            movingRight = true;
+        }else{
+            movingRight = false;
         }
-
-        if (this.position.x < 0) this.position.x = 0;
-        if (this.position.y < 0) this.position.y = 0;
-        if (this.position.x + this.HELI_WIDTH >= Gdx.graphics.getWidth()) this.position.x = Gdx.graphics.getWidth() - this.HELI_WIDTH;
-        if (this.position.y + this.HELI_HEIGHT >= Gdx.graphics.getHeight()) this.position.y = Gdx.graphics.getHeight() - this.HELI_HEIGHT;
+        this.position.x += x_speed;
+        this.position.y += y_speed;
     }
 
     public void render (SpriteBatch batch, float stateTime){

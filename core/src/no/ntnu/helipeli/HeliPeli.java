@@ -11,10 +11,12 @@ public class HeliPeli extends Game {
     public SpriteBatch batch;
     public static final int WIDTH = 480;
     public static final int HEIGHT = 720;
+    public Achievements achievements;
     @Override
     public void create() {
         batch = new SpriteBatch();
         setScreen(new MainMenu(this));
+        this.achievements = new Achievements();
     }
 
     @Override
